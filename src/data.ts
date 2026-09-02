@@ -137,16 +137,16 @@ export const scheduleDays = [
 ]
 
 export const countries = [
-  { flag: '🇸🇩', name: 'السودان' },
-  { flag: '🇪🇬', name: 'مصر' },
-  { flag: '🇯🇴', name: 'الأردن' },
-  { flag: '🇱🇧', name: 'لبنان' },
-  { flag: '🇸🇾', name: 'سوريا' },
-  { flag: '🇶🇦', name: 'قطر' },
-  { flag: '🇧🇭', name: 'البحرين' },
-  { flag: '🇱🇾', name: 'ليبيا' },
-  { flag: '🇲🇷', name: 'موريتانيا' },
-  { flag: '🇾🇪', name: 'اليمن' },
+  { code: 'sd', name: 'السودان' },
+  { code: 'eg', name: 'مصر' },
+  { code: 'jo', name: 'الأردن' },
+  { code: 'lb', name: 'لبنان' },
+  { code: 'sy', name: 'سوريا' },
+  { code: 'qa', name: 'قطر' },
+  { code: 'bh', name: 'البحرين' },
+  { code: 'ly', name: 'ليبيا' },
+  { code: 'mr', name: 'موريتانيا' },
+  { code: 'ye', name: 'اليمن' },
 ]
 
 export const speakers = [
