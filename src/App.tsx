@@ -28,7 +28,7 @@ function Navbar() {
           <a href="#hero" className="navbar-logo">
             <span className="brand-logo-glow">
               <img
-                src={`${import.meta.env.BASE_URL}association-logo.png`}
+                src={`${import.meta.env.BASE_URL}association-logo-web.png`}
                 alt="شعار الملتقى الأول لجودة التدريب والاعتماد المهني"
               />
             </span>
@@ -576,7 +576,7 @@ function Footer() {
             <div className="footer-brand-heading">
               <span className="brand-logo-glow footer-logo-glow">
                 <img
-                  src={`${import.meta.env.BASE_URL}association-logo.png`}
+                  src={`${import.meta.env.BASE_URL}association-logo-web.png`}
                   alt="شعار الملتقى الأول لجودة التدريب والاعتماد المهني"
                   loading="lazy"
                 />
