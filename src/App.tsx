@@ -284,7 +284,14 @@ function Countries() {
               key={i}
               style={{ transitionDelay: `${i * 0.05}s` }}
             >
-              <div className="country-flag">{country.flag}</div>
+              <div className="country-flag">
+                <img
+                  src={`https://flagcdn.com/w160/${country.code}.png`}
+                  srcSet={`https://flagcdn.com/w320/${country.code}.png 2x`}
+                  alt={`علم ${country.name}`}
+                  loading="lazy"
+                />
+              </div>
               <div className="country-name">{country.name}</div>
             </div>
           ))}
