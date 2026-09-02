@@ -265,6 +265,7 @@ function Schedule() {
   )
 }
 
+// Render real flag images consistently across devices.
 function Countries() {
   const { ref, visible } = useScrollReveal<HTMLDivElement>()
   return (
