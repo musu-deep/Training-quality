@@ -491,7 +491,7 @@ function Registration() {
                       </option>
                       {countries.map((c) => (
                         <option key={c.name} value={c.name}>
-                          {c.flag} {c.name}
+                          {c.name}
                         </option>
                       ))}
                       <option value="other">أخرى</option>
