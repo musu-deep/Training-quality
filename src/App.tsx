@@ -233,9 +233,9 @@ function Schedule() {
       <div className="container">
         <div className="section-header">
           <span className="section-label">محاور الملتقى</span>
-          <h2 className="section-title">برنامج الأيام الثلاثة</h2>
+          <h2 className="section-title">جدول أعمال الملتقى</h2>
           <p className="section-subtitle">
-            ثلاثة أيام مليئة بالعلم والمعرفة والتفاعل، تغطي محاور جودة التدريب من الأسس إلى المستقبل
+            ثلاثة أيام تشمل ورش تفاعلية وأوراق عمل تغطي محاور جودة التدريب من الأسس إلى المستقبل
           </p>
         </div>
         <div className="schedule-days" ref={ref}>
