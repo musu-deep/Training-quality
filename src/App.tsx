@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { supabase } from './lib/supabase'
 import { useScrollReveal, useNavbarScroll } from './hooks'
 import {
@@ -73,6 +73,43 @@ function Navbar() {
   )
 }
 
+const forumStart = new Date('2026-09-22T00:00:00+02:00').getTime()
+
+function Countdown() {
+  const [remaining, setRemaining] = useState(() => Math.max(0, forumStart - Date.now()))
+
+  useEffect(() => {
+    const update = () => setRemaining(Math.max(0, forumStart - Date.now()))
+    update()
+    const timer = window.setInterval(update, 1000)
+    return () => window.clearInterval(timer)
+  }, [])
+
+  if (remaining === 0) return <div className="countdown-live">انطلق الملتقى</div>
+
+  const totalSeconds = Math.floor(remaining / 1000)
+  const units = [
+    { label: 'يوم', value: Math.floor(totalSeconds / 86400) },
+    { label: 'ساعة', value: Math.floor((totalSeconds % 86400) / 3600) },
+    { label: 'دقيقة', value: Math.floor((totalSeconds % 3600) / 60) },
+    { label: 'ثانية', value: totalSeconds % 60 },
+  ]
+
+  return (
+    <div className="countdown-wrap" aria-label="الوقت المتبقي لانطلاق الملتقى">
+      <div className="countdown-heading">متبقي على انطلاق الملتقى</div>
+      <div className="countdown-grid" dir="ltr">
+        {units.map((unit) => (
+          <div className="countdown-unit" key={unit.label}>
+            <strong>{String(unit.value).padStart(2, '0')}</strong>
+            <span>{unit.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function Hero() {
   return (
     <section className="hero" id="hero">
@@ -129,6 +166,7 @@ function Hero() {
                 ))}
               </ul>
             </div>
+            <Countdown />
           </div>
         </div>
       </div>
