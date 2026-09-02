@@ -26,10 +26,13 @@ function Navbar() {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-inner">
           <a href="#hero" className="navbar-logo">
-            <span className="navbar-logo-icon">
-              <Sparkles size={20} color="#1a503c" />
+            <span className="brand-logo-glow">
+              <img
+                src={`${import.meta.env.BASE_URL}forum-logo.png`}
+                alt="شعار الملتقى الأول لجودة التدريب والاعتماد المهني"
+              />
             </span>
-            ملتقى جودة التدريب
+            <span className="navbar-brand-name">الجمعية السودانية لجودة التدريب</span>
           </a>
           <div className="navbar-links">
             {navLinks.map((link) => (
@@ -532,7 +535,16 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>الجمعية السودانية لجودة التدريب</h3>
+            <div className="footer-brand-heading">
+              <span className="brand-logo-glow footer-logo-glow">
+                <img
+                  src={`${import.meta.env.BASE_URL}forum-logo.png`}
+                  alt="شعار الملتقى الأول لجودة التدريب والاعتماد المهني"
+                  loading="lazy"
+                />
+              </span>
+              <h3>الجمعية السودانية لجودة التدريب</h3>
+            </div>
             <p>
               الملتقى الأول لجودة التدريب والاعتماد المهني، منصة علمية وعملية تجمع نخبة الخبراء والممارسين
               في صناعة التدريب من السودان والوطن العربي.

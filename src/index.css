@@ -260,15 +260,40 @@ input, textarea, select {
   color: var(--primary-700);
 }
 
-.navbar-logo-icon {
-  width: 38px;
-  height: 38px;
-  background: var(--accent-300);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.brand-logo-glow {
+  position: relative;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.brand-logo-glow::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.78) 0%, rgba(95, 199, 128, 0.3) 42%, transparent 72%);
+  filter: blur(7px);
+  opacity: 0.85;
+}
+
+.brand-logo-glow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.22));
+}
+
+.navbar.scrolled .brand-logo-glow::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(74, 179, 105, 0.24) 46%, transparent 74%);
+}
+
+.navbar-brand-name {
+  line-height: 1.35;
 }
 
 .navbar-links {
@@ -1276,11 +1301,29 @@ input, textarea, select {
   margin-bottom: var(--space-6);
 }
 
+.footer-brand-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.footer-logo-glow {
+  width: 72px;
+  height: 72px;
+}
+
+.footer-logo-glow::before {
+  inset: -12px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(72, 180, 111, 0.3) 42%, rgba(35, 89, 68, 0.12) 60%, transparent 76%);
+  filter: blur(10px);
+}
+
 .footer-brand h3 {
   font-size: 1.3rem;
   font-weight: 900;
   color: var(--neutral-0);
-  margin-bottom: var(--space-2);
+  margin: 0;
 }
 
 .footer-brand p {
@@ -1421,6 +1464,21 @@ input, textarea, select {
 }
 
 @media (max-width: 480px) {
+  .navbar-logo {
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    max-width: 220px;
+  }
+
+  .navbar-logo .brand-logo-glow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-brand-heading {
+    align-items: flex-start;
+  }
+
   .container {
     padding: 0 var(--space-3);
   }
