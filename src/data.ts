@@ -150,21 +150,21 @@ export const countries = [
 ]
 
 export const speakers = [
-  { name: 'د. يوسف بن علي الكاظم', initials: 'ي' },
-  { name: 'أ. ماريا حيدر', initials: 'م' },
-  { name: 'د. محمد زين العابدين ابوجديري', initials: 'م' },
-  { name: 'د. منيب عبدالعزيز', initials: 'م' },
-  { name: 'د. محمد البيه', initials: 'م' },
-  { name: 'أ. عبدالعزيز السندي', initials: 'ع' },
-  { name: 'د. محمد عبالحميد سيد احمد', initials: 'م' },
-  { name: 'د. فتحية كعيم', initials: 'ف' },
+  { name: 'د. يوسف بن علي الكاظم', initials: 'ي', image: 'yousef-alkazem.webp' },
+  { name: 'أ. ماريا حيدر', initials: 'م', image: 'maria-haidar.webp' },
+  { name: 'د. محمد زين العابدين أبوجديري', initials: 'م', image: 'mohamed-zain-abugderi.webp' },
+  { name: 'د. منيب عبدالعزيز', initials: 'م', image: 'muneeb-abdelaziz.webp' },
+  { name: 'د. محمد البيه', initials: 'م', image: 'mohamed-elbeih.webp' },
+  { name: 'أ. عبدالعزيز السندي', initials: 'ع', image: 'abdulaziz-al-sindi.webp' },
+  { name: 'د. محمد عبد الحميد سيد أحمد', initials: 'م', image: 'mohamed-abdelhamid-sidahmed.webp' },
+  { name: 'د. فتحية كعيم', initials: 'ف', image: 'fathia-kuaim.webp' },
   { name: 'أ. رشاد قاسم عبدالله', initials: 'ر' },
-  { name: 'د. وائل رضا', initials: 'و' },
-  { name: 'أ. العادل محمد محمود', initials: 'ع' },
-  { name: 'د. نشأت صباح البعيني', initials: 'ن' },
-  { name: 'د. عاطف عوض', initials: 'ع' },
+  { name: 'د. وائل رضا', initials: 'و', image: 'wael-rida.webp' },
+  { name: 'أ. العادل محمد محمود', initials: 'ع', image: 'aladel-mohamed-mahmoud.webp' },
+  { name: 'د. نشأت صباح البعيني', initials: 'ن', image: 'nashat-sabah-albuaini.webp' },
+  { name: 'د. عاطف عوض', initials: 'ع', image: 'atef-awad.webp' },
   { name: 'د. مجدي محمد حمدان', initials: 'م' },
-  { name: 'أ. معتز محجوب عثمان', initials: 'م' },
+  { name: 'أ. معتز محجوب عثمان', initials: 'م', image: 'moataz-mahjoub-othman.webp' },
 ]
 
 export const registrationBenefits = [

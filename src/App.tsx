@@ -313,7 +313,17 @@ function Speakers() {
               key={i}
               style={{ transitionDelay: `${(i % 5) * 0.08}s` }}
             >
-              <div className="speaker-avatar">{speaker.initials}</div>
+              <div className="speaker-avatar">
+                {'image' in speaker ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}speakers/${speaker.image}`}
+                    alt={`صورة ${speaker.name}`}
+                    loading="lazy"
+                  />
+                ) : (
+                  speaker.initials
+                )}
+              </div>
               <div className="speaker-info">
                 <div className="speaker-name">{speaker.name}</div>
                 <div className="speaker-role">متحدث</div>
