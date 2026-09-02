@@ -175,7 +175,7 @@ function About() {
           <div className={`about-visual fade-up ${visible ? 'visible' : ''}`}>
             <div className="about-image-wrap">
               <img
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={`${import.meta.env.BASE_URL}about-forum.webp`}
                 alt="ملتقى جودة التدريب"
                 loading="lazy"
               />
