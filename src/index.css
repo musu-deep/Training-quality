@@ -400,16 +400,18 @@ input, textarea, select {
 .hero-image {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.pexels.com/photos/14348540/pexels-photo-14348540.jpeg?auto=compress&cs=tinysrgb&w=1920');
+  background-image: url('/hero-campus.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center 48%;
   z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 45, 34, 0.72) 0%, rgba(26, 80, 60, 0.6) 40%, rgba(10, 32, 24, 0.78) 100%);
+  background:
+    linear-gradient(90deg, rgba(8, 26, 20, 0.12) 0%, rgba(8, 26, 20, 0.08) 45%, rgba(8, 30, 22, 0.34) 100%),
+    linear-gradient(180deg, rgba(3, 13, 10, 0.08) 45%, rgba(3, 13, 10, 0.28) 100%);
   z-index: 1;
 }
 
@@ -449,13 +451,19 @@ input, textarea, select {
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 65%);
+  width: min(720px, 58vw);
+  height: min(720px, 82vh);
+  background: radial-gradient(
+    ellipse,
+    rgba(8, 35, 25, 0.64) 0%,
+    rgba(9, 39, 29, 0.42) 38%,
+    rgba(245, 201, 48, 0.07) 56%,
+    transparent 74%
+  );
   border-radius: 50%;
   z-index: 1;
   pointer-events: none;
-  filter: blur(20px);
+  filter: blur(22px);
 }
 
 .hero-content {
@@ -470,6 +478,18 @@ input, textarea, select {
 
 .hero-text {
   max-width: 580px;
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-text::before {
+  content: '';
+  position: absolute;
+  inset: -3.5rem -4.5rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(6, 28, 20, 0.48) 0%, rgba(6, 28, 20, 0.22) 48%, transparent 74%);
+  filter: blur(10px);
 }
 
 .hero-badge {
@@ -495,6 +515,7 @@ input, textarea, select {
   color: var(--neutral-0);
   line-height: 1.15;
   margin-bottom: var(--space-4);
+  text-shadow: 0 3px 22px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title .accent-text {
@@ -506,6 +527,7 @@ input, textarea, select {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
   margin-bottom: var(--space-5);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-meta {
