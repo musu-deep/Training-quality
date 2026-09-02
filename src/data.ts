@@ -158,12 +158,12 @@ export const speakers = [
   { name: 'أ. عبدالعزيز السندي', initials: 'ع', image: 'abdulaziz-al-sindi.webp' },
   { name: 'د. محمد عبد الحميد سيد أحمد', initials: 'م', image: 'mohamed-abdelhamid-sidahmed.webp' },
   { name: 'د. فتحية كعيم', initials: 'ف', image: 'fathia-kuaim.webp' },
-  { name: 'أ. رشاد قاسم عبدالله', initials: 'ر' },
+  { name: 'أ. رشاد قاسم عبد الله', initials: 'ر', image: 'rashad-qasim-abdullah.webp' },
   { name: 'د. وائل رضا', initials: 'و', image: 'wael-rida.webp' },
   { name: 'أ. العادل محمد محمود', initials: 'ع', image: 'aladel-mohamed-mahmoud.webp' },
   { name: 'د. نشأت صباح البعيني', initials: 'ن', image: 'nashat-sabah-albuaini.webp' },
   { name: 'د. عاطف عوض', initials: 'ع', image: 'atef-awad.webp' },
-  { name: 'د. مجدي محمد حمدان', initials: 'م' },
+  { name: 'د. مجدي محمد حمدان', initials: 'م', image: 'majdi-mohamed-hamdan.webp' },
   { name: 'أ. معتز محجوب عثمان', initials: 'م', image: 'moataz-mahjoub-othman.webp' },
 ]
 
